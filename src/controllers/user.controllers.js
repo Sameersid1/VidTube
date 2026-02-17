@@ -122,8 +122,10 @@ const loginUser=asyncHandler(async(req,res)=>{
         throw new ApiError(409,"Invalid credentials");
     }
 
-    const {accessToken,refreshToken}=generateAccessAndRefreshToken(user._id)
+    const {accessToken,refreshToken}=await generateAccessAndRefreshToken(user._id)
 
+    console.log(accessToken)
+    console.log(refreshToken)
     const loggedInUser=await User.findById(user._id).select("-password -refreshToken")
 
     const options={
@@ -142,7 +144,12 @@ const loginUser=asyncHandler(async(req,res)=>{
             )
         )
 })
-
+// Take refresh token from cookie or body
+//Verify it
+// Check it matches DB
+//Generate new access + refresh token
+//Save new refresh token in DB
+// Send new tokens
 const refreshAccessToken=asyncHandler(async(req,res)=>{
     const incomingRefreshToken=req.cookies.refreshToken || req.body.refreshToken
 
@@ -163,9 +170,9 @@ const refreshAccessToken=asyncHandler(async(req,res)=>{
         }  
         const options={
             httpOnly:true,
-            secure:process.env.NODE_ENV="roduction"
+            secure:process.env.NODE_ENV="production"
         }
-        const {accessToken,refreshToken:newRefreshToken}=await generateAccessAndRefreshToken(user_.id)
+        const {accessToken,refreshToken:newRefreshToken}=await generateAccessAndRefreshToken(user._id)
 
         return res
             .status(200)
@@ -195,8 +202,8 @@ const logoutUser=asyncHandler(async(req,res)=>{
     }
     return res
         .status(200)
-        .clearCookies("accessToken",options)
-        .clearCookies("refreshToken",options)
+        .clearCookie("accessToken",options)
+        .clearCookie("refreshToken",options)
         .json(
             new ApiResponse(200,{},"User logged out successfully")
         )
@@ -278,12 +285,13 @@ const updateUserCoverImage=asyncHandler(async(req,res)=>{
         req.user?._id,
         {
             $set:{
-                coverImagemage:coverImage.url
+                coverImage:coverImage.url
             }
         },{new:true}
     ).select("-password -refreshToken")
     return res.status(200).json(new ApiResponse(200,user,"CoverImage updated successfully"))
 })
+//subscriber and subscribed
 const getUserChannelProfile=asyncHandler(async(req,res)=>{
     const {username}=req.params
     if(!username.trim()){
@@ -393,5 +401,5 @@ const getWatchHistory=asyncHandler(async(req,res)=>{
     return res.status(200).json(new ApiResponse(200,user[0]?.watchHistory,"Watch History fetched successfully"))
 })
 export{
-    registerUser,loginUser,refreshAccessToken,logoutUser,changeCurrentPassword,getCurrentUser,updateAccountDetails,updateUserAvatar,updateUserCoverImage,getUserChannelProfile
+    registerUser,loginUser,refreshAccessToken,logoutUser,changeCurrentPassword,getCurrentUser,updateAccountDetails,updateUserAvatar,updateUserCoverImage,getUserChannelProfile,getWatchHistory
 }

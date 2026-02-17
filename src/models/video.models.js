@@ -14,7 +14,7 @@ const videoSchema=new Schema({
         type:String,
         required: true
     },
-    desciption:{
+    description:{
         type:String,
         required: true
     },
@@ -28,14 +28,18 @@ const videoSchema=new Schema({
     },
     isPublished:{
         type:Boolean,
-        required:true
+        default:true
     },
     owner:{
         type:Schema.Types.ObjectId,
-        ref:"User"
+        ref:"User",
+        required:true
     }
 },{timestamps:true})
 
+videoSchema.index({title:"text"});
+videoSchema.index({owner:1});
+videoSchema.index({createdAt:-1});
 videoSchema.plugin(mongooseAggregatePaginate)
 
 export const Video=mongoose.model("Video",videoSchema)

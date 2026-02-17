@@ -3,7 +3,7 @@ import {User} from "../models/user.models.js"
 import { ApiError } from "../utils/ApiError.js"
 import { asyncHandler } from "../utils/asyncHandler.js"
 
-export const verifyJWT=asyncHandler(async(requestAnimationFrame,resizeBy,next)=>{
+export const verifyJWT=asyncHandler(async(req,res,next)=>{
     const token=req.cookies.accessToken || req.header("Authorization")?.replace("Bearer ","")
 
     if(!token){

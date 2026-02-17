@@ -1,2 +1,6 @@
 {"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/v1/register\",\"status\":\"404\",\"responseTime\":\"2.568\"}","timestamp":"2026-02-03T13:53:49.905Z"}
 {"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/v1/register\",\"status\":\"404\",\"responseTime\":\"0.875\"}","timestamp":"2026-02-03T13:54:20.298Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/v1/users/update-account\",\"status\":\"404\",\"responseTime\":\"1.450\"}","timestamp":"2026-02-16T18:57:07.624Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/v1/users/c/four\",\"status\":\"404\",\"responseTime\":\"1.598\"}","timestamp":"2026-02-16T19:05:20.584Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"PATCH\",\"url\":\"/api/v1/users/coverImage\",\"status\":\"404\",\"responseTime\":\"2.369\"}","timestamp":"2026-02-16T19:14:38.277Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"PATCH\",\"url\":\"/api/v1/users/coverImage\",\"status\":\"404\",\"responseTime\":\"2.784\"}","timestamp":"2026-02-16T19:17:19.087Z"}
