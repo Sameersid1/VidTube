@@ -9,12 +9,12 @@ dotenv.config()
         api_secret: process.env.CLOUDINARY_API_SECRET
     });
 
-const uploadOnCloudinary=async (localFilePath)=>{             //This function receives:👉 path of file saved by Multer  e.g.public/temp/avatar-1706791938.png
+const uploadOnCloudinary=async (localFilePath,resourceType="auto")=>{             //This function receives:👉 path of file saved by Multer  e.g.public/temp/avatar-1706791938.png
     try{
         if(!localFilePath)  return null
         const response=await cloudinary.uploader.upload(
             localFilePath,{
-                resource_type: "auto"       //Without "auto" → videos & PDFs may fail ❌
+                resource_type: resourceType     //"auto"       //Without "auto" → videos & PDFs may fail ❌
             }
         )
         console.log("File uploaded on cloudinary. File src: "+response.url)

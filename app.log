@@ -4,3 +4,15 @@
 {"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/v1/users/c/four\",\"status\":\"404\",\"responseTime\":\"1.598\"}","timestamp":"2026-02-16T19:05:20.584Z"}
 {"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"PATCH\",\"url\":\"/api/v1/users/coverImage\",\"status\":\"404\",\"responseTime\":\"2.369\"}","timestamp":"2026-02-16T19:14:38.277Z"}
 {"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"PATCH\",\"url\":\"/api/v1/users/coverImage\",\"status\":\"404\",\"responseTime\":\"2.784\"}","timestamp":"2026-02-16T19:17:19.087Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/v1/video/69956655448c4419b2ea25b5\",\"status\":\"404\",\"responseTime\":\"1.284\"}","timestamp":"2026-02-19T18:50:44.919Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/v1/video/69956655448c4419b2ea25b5\",\"status\":\"404\",\"responseTime\":\"0.750\"}","timestamp":"2026-02-19T18:52:37.677Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api/v1/subscription/69822f1a91b2fe2e53789734\",\"status\":\"404\",\"responseTime\":\"1.936\"}","timestamp":"2026-02-22T09:50:01.308Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api/v1/subscription/69822f1a91b2fe2e53789734\",\"status\":\"404\",\"responseTime\":\"2.187\"}","timestamp":"2026-02-22T10:05:59.156Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api/v1/subscription/69822f1a91b2fe2e53789734\",\"status\":\"404\",\"responseTime\":\"0.365\"}","timestamp":"2026-02-22T10:06:02.844Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api/v1/subscription/69822f1a91b2fe2e53789734\",\"status\":\"404\",\"responseTime\":\"2.039\"}","timestamp":"2026-02-22T10:07:06.552Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api/v1/subscription/69822f1a91b2fe2e53789734\",\"status\":\"404\",\"responseTime\":\"0.313\"}","timestamp":"2026-02-22T10:08:24.493Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"DELETE\",\"url\":\"/api/v1/playlists/699b5cc2cd2dcd026083d4c0/videos/699ca349751382347fb60536\",\"status\":\"404\",\"responseTime\":\"1.795\"}","timestamp":"2026-02-23T19:02:03.234Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/v1/playlists/me\",\"status\":\"404\",\"responseTime\":\"4.053\"}","timestamp":"2026-02-23T19:19:23.413Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/v1/tweet/me\",\"status\":\"404\",\"responseTime\":\"1.624\"}","timestamp":"2026-02-26T15:31:48.592Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"DELETE\",\"url\":\"/api/v1/tweet/69a0679ea0923be9a50b6c43\",\"status\":\"404\",\"responseTime\":\"2.541\"}","timestamp":"2026-02-27T18:03:49.267Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/v1/video/69956655448c4419b2ea25b5\",\"status\":\"404\",\"responseTime\":\"2.909\"}","timestamp":"2026-02-27T19:05:38.982Z"}

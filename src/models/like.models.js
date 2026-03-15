@@ -4,10 +4,10 @@ const likeSchema=new Schema(
     {
         video:{
             type: Schema.Types.ObjectId,
-            ref:"Video"
+            ref:"Video",
         },
         comment:{
-            type: Schema.Types.ObjectId,
+            type:Schema.Types.ObjectId,
             ref:"Comment"
         },
         tweet:{
@@ -16,9 +16,10 @@ const likeSchema=new Schema(
         },
         likedBy:{
             type: Schema.Types.ObjectId,
-            ref:"User"
+            ref:"User",
+            required:true
         }
     },{timestamps:true}
 )
-
+likeSchema.index({video:1,comment:1,tweet:1,likedBy:1},{unique:true})
 export const Like=mongoose.model("Like",likeSchema)
