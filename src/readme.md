@@ -64,7 +64,7 @@ VidTube/
 ## ⚙️ Installation & Setup
 
 ```bash
-git clone https://github.com/your-username/vidtube.git
+git clone https://github.com/Sameersid1/vidtube.git
 cd vidtube
 Backend
 cd backend
