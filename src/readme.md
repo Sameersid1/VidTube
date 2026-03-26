@@ -52,7 +52,7 @@ VidTube/
 └── README.md
 ⚙️ Installation & Setup
 1️⃣ Clone the repository
-git clone https://github.com/Sameersid1/vidtube.git
+git clone https://github.com/your-username/vidtube.git
 cd vidtube
 2️⃣ Setup Backend
 cd backend
