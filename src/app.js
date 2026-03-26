@@ -20,7 +20,10 @@ app.use(cookieParser())
 //import routes
 import healthcheckRouter from './routes/healthcheck.routes.js'
 import userRouter from "./routes/user.routes.js"
-import{errorHandler} from "./middlewares/error.middlewares.js"
+
+import {errorHandler} from "./middlewares/error.middlewares.js"
+
+
 import videoRouter from "./routes/video.routes.js"
 import subscriptionRouter from "./routes/subscription.routes.js"
 import playlistRouter from "./routes/playlist.routes.js"
